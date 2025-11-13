@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Group + Private Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#00a884">
+  <link href="style.css" rel="stylesheet" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27/%3E">
+</head>
+<body>
+  <!-- Login -->
+  <div id="login">
+    <div class="card">
+      <h2>Login</h2>
+      <input id="loginUsername" placeholder="Username" autocomplete="username" />
+      <input id="loginPassword" placeholder="Password" type="password" autocomplete="current-password" />
+      <button id="loginBtn">Login</button>
+      <p id="loginError" class="error"></p>
+      <p class="auth-link">
+        Don't have an account? <a href="#" id="showSignupBtn">Sign up</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Signup -->
+  <div id="signup" class="hidden">
+    <div class="card">
+      <h2>Sign Up</h2>
+      <input id="signupFullName" placeholder="Full Name" autocomplete="name" />
+      <input id="signupUsername" placeholder="Username" autocomplete="username" />
+      <input id="signupPassword" placeholder="Password" type="password" autocomplete="new-password" />
+      <input id="confirmPassword" placeholder="Confirm Password" type="password" autocomplete="new-password" />
+      <button id="signupBtn">Sign Up</button>
+      <p id="signupError" class="error"></p>
+      <p class="auth-link">
+        Already have an account? <a href="#" id="showLoginBtn">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <div id="chat" class="hidden">
+    <header id="topbar">
+      <button id="accountBtn" class="icon-btn" title="Account">👤</button>
+      <div class="room-info">
+        <span id="roomBadge" class="badge">Group</span>
+        <h3 id="roomTitle">Group</h3>
+      </div>
+      <button id="menuBtn" class="icon-btn" title="Menu" data-badge="">⋯</button>
+    </header>
+
+    <main id="messages"></main>
+
+    <footer id="composer">
+      <button id="attachBtn" class="icon-btn attach" title="Attach">
+        <img src="/icons/attach.png" alt="📎" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        <span style="display:none;">📎</span>
+      </button>
+      <input id="fileInput" type="file" multiple class="hidden"
+             accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.zip" />
+      <input id="msgInput" placeholder="Type a message..." />
+      <button id="voiceBtn" class="icon-btn voice-btn" title="Voice Message">
+        <img src="/icons/voice.png" alt="🎤" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        <span style="display:none;">🎤</span>
+      </button>
+      <button id="sendBtn">Send</button>
+    </footer>
+
+    <!-- Slide-out menu -->
+    <aside id="menu" class="menu hidden">
+      <div class="menu-header">
+        <strong>Chats</strong>
+        <button id="menuClose" class="icon-btn">✕</button>
+      </div>
+      <ul id="chatList"></ul>
+    </aside>
+
+    <!-- Small toast for notifications -->
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <!-- Account page -->
+  <div id="account" class="hidden">
+    <div class="card">
+      <div class="account-header">
+        <button id="accountBackBtn" class="icon-btn">←</button>
+        <h2>Account</h2>
+        <button id="editAccountBtn" class="toggle-btn">Edit</button>
+      </div>
+      
+      <!-- View Mode -->
+      <div id="accountViewMode" class="account-info">
+        <div class="info-item">
+          <label>Full Name:</label>
+          <span id="accountFullName"></span>
+        </div>
+        <div class="info-item">
+          <label>Username:</label>
+          <span id="accountUsername"></span>
+        </div>
+        <div class="info-item">
+          <label>Password:</label>
+          <span id="accountPassword">••••••••</span>
+          <button id="togglePasswordBtn" class="toggle-btn">Show</button>
+        </div>
+        <div class="info-item">
+          <label>Member since:</label>
+          <span id="accountCreatedAt"></span>
+        </div>
+      </div>
+      
+      <!-- Edit Mode -->
+      <div id="accountEditMode" class="account-info hidden">
+        <div class="info-item">
+          <label>Full Name:</label>
+          <input id="editFullName" type="text" placeholder="Full Name" />
+        </div>
+        <div class="info-item">
+          <label>Current Password:</label>
+          <input id="editCurrentPassword" type="password" placeholder="Current Password" />
+        </div>
+        <div class="info-item">
+          <label>New Password:</label>
+          <input id="editNewPassword" type="password" placeholder="New Password (optional)" />
+        </div>
+        <div class="account-edit-buttons">
+          <button id="saveAccountBtn" class="save-btn">Save Changes</button>
+          <button id="cancelEditBtn" class="cancel-btn">Cancel</button>
+        </div>
+        <p id="accountEditError" class="error"></p>
+      </div>
+      
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="animations.js"></script>
+  <script src="calling.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

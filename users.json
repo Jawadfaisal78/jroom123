@@ -1,0 +1,26 @@
+[
+  {
+    "fullName": "Jawad Faisal",
+    "username": "admin494",
+    "password": "$2b$12$yIK1sxwGytLDOLp405x5seoGN1WsSQDSMSxdwP0EvPKz.4QdaGApO",
+    "createdAt": "2025-11-11T19:54:10.463Z"
+  },
+  {
+    "fullName": "Areeba",
+    "username": "areeba123",
+    "password": "$2b$12$Jgr6aBtVCA249RDhiqKIAOEUFcLjx7NTOZH8sqkqKHMG/fYOfjRI6",
+    "createdAt": "2025-11-12T13:09:19.525Z"
+  },
+  {
+    "fullName": "Rizwan anwar",
+    "username": "rizwan",
+    "password": "$2b$12$sZHBa9Bd4vS7jav.Oc.Q0OpBri1BsHdplBqIfwwpF7W/5xvHEYN2W",
+    "createdAt": "2025-11-12T15:36:09.106Z"
+  },
+  {
+    "fullName": "Mian Faisal",
+    "username": "lahori425",
+    "password": "$2b$12$BcDG1eVL0ttXbCWVMaY.kOmhGkDv5qwnk6vZHk.wWAYgNyGraosC2",
+    "createdAt": "2025-11-12T18:20:07.808Z"
+  }
+]

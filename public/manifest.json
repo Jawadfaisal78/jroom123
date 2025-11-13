@@ -1,0 +1,61 @@
+
+{
+  "name": "Chat App",
+  "short_name": "Chat",
+  "description": "Group + Private Chat Application with Background Notifications",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0b141a",
+  "theme_color": "#00a884",
+  "categories": ["communication", "social"],
+  "lang": "en",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yMCAySDE0QzMuNDUgMiAzIDIuNDUgMyAzVjIxTDcgMTdIMjBDMjAuNTUgMTcgMjEgMTYuNTUgMjEgMTZWM0MyMSAyLjQ1IDIwLjU1IDIgMjAgMloiIGZpbGw9IiMwMGE4ODQiLz48L3N2Zz4=",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yMCAySDE0QzMuNDUgMiAzIDIuNDUgMyAzVjIxTDcgMTdIMjBDMjAuNTUgMTcgMjEgMTYuNTUgMjEgMTZWM0MyMSAyLjQ1IDIwLjU1IDIgMjAgMloiIGZpbGw9IiMwMGE4ODQiLz48L3N2Zz4=",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI3MjAiIHZpZXdCb3g9IjAgMCAxMjgwIDcyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI3MjAiIGZpbGw9IiMwYjE0MWEiLz48dGV4dCB4PSI2NDAiIHk9IjM2MCIgZmlsbD0iIzAwYTg4NCIgZm9udC1zaXplPSI0OCIgZm9udC1mYW1pbHk9IkFyaWFsIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DaGF0IEFwcDwvdGV4dD48L3N2Zz4=",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "label": "Chat App Main Screen"
+    }
+  ],
+  "features": [
+    "cross-origin-isolated"
+  ],
+  "permissions": [
+    "notifications",
+    "vibrate"
+  ]
+}
+{
+  "name": "Group + Private Chat",
+  "short_name": "Chat App",
+  "description": "Group + private chat with notifications and file sharing",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c1317",
+  "theme_color": "#00a884",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yMCAySDE0QzMuNDUgMiAzIDIuNDUgMyAzVjIxTDcgMTdIMjBDMjAuNTUgMTcgMjEgMTYuNTUgMjEgMTZWM0MyMSAyLjQ1IDIwLjU1IDIgMjAgMloiIGZpbGw9IiMwMGE4ODQiLz48L3N2Zz4=",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}

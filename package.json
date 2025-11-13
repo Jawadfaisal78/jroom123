@@ -1,0 +1,19 @@
+{
+  "name": "chat-app",
+  "version": "1.1.0",
+  "description": "Group + private chat with unread badges, notifications, and file sharing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@replit/database": "^3.0.1",
+    "bcrypt": "^6.0.0",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "replit": "^0.3.1",
+    "socket.io": "^4.7.5"
+  }
+}
